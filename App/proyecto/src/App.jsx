@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Sidebar from "./components/Sidebar.jsx";
 import CurrentWeather from "./components/CurrentWeather";
 import WeatherCard from "./components/WeatherCard";
 import HourlyForecast from "./components/HourlyForecast";
 import "./App.css";
-
-const DEFAULT_LOCATION = "Cancún, Quintana Roo"; // Puedes cambiar luego a "Cancun, MX" si da error
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -15,41 +13,36 @@ function App() {
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleLocationChange = async (location) => {
-    if (!location || !location.trim()) return;
+  if (!location || !location.trim()) return;
 
-    try {
-      setLoading(true);
-      setErrorMsg("");
+  try {
+    setLoading(true);
+    setErrorMsg("");
 
-      const res = await fetch(
-        `http://localhost:4000/api/weather?location=${encodeURIComponent(
-          location.trim()
-        )}`
-      );
+    const res = await fetch(
+      `http://localhost:4000/api/weather?location=${encodeURIComponent(
+        location.trim()
+      )}`
+    );
 
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err.error || "Error al obtener el clima");
-      }
-
-      const data = await res.json();
-
-      setCurrentWeather(data.currentWeather);
-      setHourlyForecast(data.hourlyForecast || []);
-      setCards(data.cards || []);
-    } catch (err) {
-      console.error(err);
-      setErrorMsg(err.message || "Error desconocido");
-    } finally {
-      setLoading(false);
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || "Error al obtener el clima");
     }
-  };
 
-  // 🔹 Al montar la app, cargamos Cancún por defecto
-  useEffect(() => {
-    handleLocationChange(DEFAULT_LOCATION);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    const data = await res.json();
+
+    setCurrentWeather(data.currentWeather);
+    setHourlyForecast(data.hourlyForecast || []);
+    setCards(data.cards || []);
+  } catch (err) {
+    console.error(err);
+    setErrorMsg(err.message || "Error desconocido");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div className="app">

@@ -1,0 +1,72 @@
+{
+  "ciudadesMexico": [
+    "Aguascalientes", "Tijuana", "Mexicali", "Ensenada", "La Paz", "Los Cabos",
+    "Campeche", "Saltillo", "Colima", "Tuxtla Gutiérrez", "Chihuahua", "Ciudad Juárez",
+    "Ciudad de México", "Durango", "Guanajuato", "León", "Chilpancingo", "Acapulco",
+    "Pachuca", "Guadalajara", "Puerto Vallarta", "Toluca", "Morelia", "Cuernavaca",
+    "Tepic", "Monterrey", "Oaxaca", "Puebla", "Querétaro", "Chetumal", "Cancún",
+    "Playa del Carmen", "San Luis Potosí", "Culiacán", "Mazatlán", "Hermosillo",
+    "Villahermosa", "Ciudad Victoria", "Tlaxcala", "Xalapa", "Veracruz", "Mérida",
+    "Zacatecas"
+  ],
+  "paises": [
+    "México", "Estados Unidos", "Canadá", "Guatemala", "Belice", "Argentina", "Brasil",
+    "Chile", "Colombia", "Perú", "España", "Francia", "Italia", "Alemania", "Japón",
+    "China", "Corea del Sur", "India", "Australia", "Reino Unido"
+  ],
+  "currentWeather": {
+    "location": "Cancún, México",
+    "date": "Miércoles, 23 de septiembre de 2025 • 21:00",
+    "temperature": "29°C",
+    "description": "Parcialmente nublado",
+    "humidity": "72%",
+    "wind": "16 km/h",
+    "pressure": "1010 hPa",
+    "visibility": "10 km",
+    "icon": "⛅"
+  },
+  "cards": [
+    {
+      "title": "Salida / Puesta",
+      "content": "☀️ 06:15 • 🌙 18:35"
+    },
+    {
+      "title": "Índice UV",
+      "content": "Moderado (5)"
+    },
+    {
+      "title": "Calidad del aire",
+      "content": "AQI 34 — Buena"
+    },
+    {
+      "title": "Fase lunar",
+      "content": "🌔 Cuarto creciente"
+    }
+  ],
+  "hourlyForecast": [
+    {"t": "00:00", "i": "🌧️", "v": "26°C"},
+    {"t": "01:00", "i": "⛅", "v": "25°C"},
+    {"t": "02:00", "i": "☁️", "v": "24°C"},
+    {"t": "03:00", "i": "🌧️", "v": "23°C"},
+    {"t": "04:00", "i": "⛅", "v": "22°C"},
+    {"t": "05:00", "i": "☁️", "v": "21°C"},
+    {"t": "06:00", "i": "🌧️", "v": "22°C"},
+    {"t": "07:00", "i": "⛅", "v": "23°C"},
+    {"t": "08:00", "i": "☁️", "v": "24°C"},
+    {"t": "09:00", "i": "🌧️", "v": "25°C"},
+    {"t": "10:00", "i": "⛅", "v": "26°C"},
+    {"t": "11:00", "i": "☁️", "v": "27°C"},
+    {"t": "12:00", "i": "🌧️", "v": "28°C"},
+    {"t": "13:00", "i": "⛅", "v": "29°C"},
+    {"t": "14:00", "i": "☁️", "v": "30°C"},
+    {"t": "15:00", "i": "🌧️", "v": "29°C"},
+    {"t": "16:00", "i": "⛅", "v": "28°C"},
+    {"t": "17:00", "i": "☁️", "v": "27°C"},
+    {"t": "18:00", "i": "🌧️", "v": "26°C"},
+    {"t": "19:00", "i": "⛅", "v": "25°C"},
+    {"t": "20:00", "i": "☁️", "v": "24°C"},
+    {"t": "21:00", "i": "🌧️", "v": "23°C"},
+    {"t": "22:00", "i": "⛅", "v": "22°C"},
+    {"t": "23:00", "i": "☁️", "v": "21°C"}
+  ]
+}
